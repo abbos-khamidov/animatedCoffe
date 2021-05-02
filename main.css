@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: grey;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+}
+
+.cup {
+  position: relative;
+  width: 280px;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, right top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+
+.top {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tea {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4e2111), to(#361d14));
+  background: linear-gradient(#4e2111, #361d14);
+  border-radius: 50%;
+}
+
+.handle {
+  position: absolute;
+  right: 190px;
+  top: 40px;
+  width: 160px;
+  height: 180px;
+  border: 25px solid #dcdcdc;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-radius: 50%;
+  -webkit-transform: rotate(-41deg);
+          transform: rotate(-41deg);
+  z-index: -1;
+}
+
+.plate {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9f9f9), to(#e7e7e7));
+  background: linear-gradient(to right, #f9f9f9, #e7e7e7);
+  width: 500px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: -2;
+  -webkit-box-shadow: 0 35px 35px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 35px 35px rgba(0, 0, 0, 0.3);
+}
+
+.plate::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, right top, left top, from(#f9f9f9), to(#e7e7e7));
+  background: linear-gradient(to left, #f9f9f9, #e7e7e7);
+}
+
+.plate::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
+  border-radius: 50%;
+}
+
+.vapour {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+  opacity: 0;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  -webkit-animation-delay: calc(var(--i) * -0.5s);
+          animation-delay: calc(var(--i) * -0.5s);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+            transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-150px) scaleX(5);
+            transform: translateY(-150px) scaleX(5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-300px) scaleX(10);
+            transform: translateY(-300px) scaleX(10);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+            transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-150px) scaleX(5);
+            transform: translateY(-150px) scaleX(5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-300px) scaleX(10);
+            transform: translateY(-300px) scaleX(10);
+  }
+}
+/*# sourceMappingURL=main.css.map */
